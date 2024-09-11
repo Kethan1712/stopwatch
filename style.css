@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.stopwatch-container {
+    text-align: center;
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #ffd700; /* Golden color */
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); /* Glow effect */
+}
+
+.display {
+    position: absolute;
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+}
+
+.progress-ring {
+    position: absolute;
+    transform: rotate(-90deg);
+}
+
+.progress-ring-circle {
+    fill: none;
+    stroke: #ff0; /* Yellow stroke */
+    stroke-dasharray: 880; /* 2 * PI * radius */
+    stroke-dashoffset: 880;
+    transition: stroke-dashoffset 0.5s;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffd700; /* Golden color */
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ffcc00;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.laps {
+    margin-top: 20px;
+}
+
+#lap-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#lap-list li {
+    margin-bottom: 10px;
+}
